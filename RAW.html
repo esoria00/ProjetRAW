@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RAW Galerie Urbaine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="RAW.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="img/logo.png" alt="RAW Galerie Urbaine" />
+    </div>
+
+    <button id="menu-btn" class="menu-btn" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="menu" class="menu">
+      <ul>
+        <li><a href="#expo">Expositions</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#evenements">Événements</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Bannière -->
+    <section class="banner">
+      <img src="Image/banner.jpg" alt="Bannière RAW" class="banner-img" />
+      <a href="#" class="visit-btn">Prépare ta visite →</a>
+    </section>
+
+    <!-- Expositions -->
+    <section id="expo" class="section">
+      <h2>Découvrez nos expositions</h2>
+
+      <div class="gallery">
+        <article>
+          <img src="Image/shibuya.jpg" alt="SHINJUKU x Ryoji Iwata" />
+          <p>SHINJUKU x Ryoji Iwata</p>
+        </article>
+
+        <article>
+          <img src="Image/look.jpg" alt="Underground x Enzo Rossi" />
+          <p>Underground x Enzo Rossi</p>
+        </article>
+
+        <article>
+          <img src="Image/lights.jpg" alt="Argentique x KAP" />
+          <p>Argentique x KAP</p>
+        </article>
+
+        <article>
+            <img src="Image/chess.jpg" alt="games x Ryoji Iwat" />
+            <p>games x Ryoji Iwat</p>
+        </article>
+
+        <article>
+            <img src="Image/clothes.jpg" alt="Abbigliamento x Enzo Rossi" />
+            <p>Abbigliamento x Enzo Rossi</p>
+        </article>
+
+        <article>
+            <img src="Image/railway.jpg" alt="railways x KAP" />
+            <p>railways x KAP</p>
+        </article>
+
+
+      </div>
+
+      <div class="slider-nav">
+        <span>‹</span>
+        <span class="active">•</span>
+        <span>›</span>
+      </div>
+    </section>
+
+    <!-- À propos -->
+    <section id="apropos" class="section about">
+      <h2>À propos de nous</h2>
+      <img src="Image/owner.jpg" alt="Fondateur de RAW" />
+      <p>
+        RAW Galerie Urbaine est née d’une envie simple : révéler la beauté brute du quotidien.<br><br>
+        Fondée par M. Dechewski, photographe et curateur passionné, la galerie se consacre à la photographie urbaine sous toutes ses formes, du réalisme cru au surréalisme discret.<br><br>
+        Nos expositions mettent en avant des artistes qui osent regarder la ville autrement (avec audace, avec sincérité, avec un peu de poussière sur les doigts).
+      </p>
+    </section>
+
+    <!-- Événements -->
+    <section id="evenements" class="section events">
+      <h2>Nos événements</h2>
+      <article>
+        <img src="Image/expo.jpg" alt="Nuit RAW" />
+        <h3>Nuit RAW</h3>
+        <p>Une soirée immersive entre projections, sons et échanges libres.</p>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
+
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("open");
+      btn.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
