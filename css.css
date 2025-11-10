@@ -22,7 +22,7 @@
 .desktop .cards {
   display: flex;
   width: 1280px;
-  align-items: flex-start;
+  align-items: stretch;
   gap: var(--variable-collection-spacing-SM);
   position: absolute;
   top: 4483px;
@@ -41,12 +41,79 @@
   margin-top: -1.00px;
   margin-bottom: -1.00px;
   margin-left: -1.00px;
-  background-color: #ffffff;
-  border-radius: 12px;
-  border: 1px solid;
-  border-color: var(--colors-border-border-default);
+
 }
 
+.desktop .footer-form-container {
+  position: absolute;
+  top: 15px; /* Aligné avec le texte 'Raw Galerie Urbaine' */
+  right: 80px; /* Marge à droite, comme la navigation */
+  width: 320px; /* Largeur du formulaire */
+  color: #ffffff;
+  font-family: "Montserrat-Regular", Helvetica;
+}
+
+.desktop .footer-form-container h3 {
+  font-family: "Noto Sans Javanese-Bold", Helvetica;
+  font-weight: 700;
+  font-size: 24px;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.desktop .footer-form-container .form-group {
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.desktop .footer-form-container label {
+  margin-bottom: 5px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #c0c0c0; /* Gris clair pour les labels */
+}
+
+.desktop .footer-form-container input[type="text"],
+.desktop .footer-form-container input[type="email"],
+.desktop .footer-form-container textarea {
+  width: 100%;
+  padding: 10px;
+  background-color: #333333; /* Fond gris foncé */
+  border: 1px solid #555555; /* Bordure plus claire */
+  border-radius: 4px;
+  color: #ffffff;
+  font-family: "Montserrat-Regular", Helvetica;
+  font-size: 16px;
+  box-sizing: border-box; /* Important pour que le padding n'augmente pas la largeur */
+}
+
+.desktop .footer-form-container textarea {
+  resize: vertical; /* Permet de redimensionner verticalement */
+}
+
+.desktop .footer-form-container .form-submit-button {
+  all: unset; /* Réinitialise les styles de bouton */
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Bouton pleine largeur */
+  padding: 12px 24px;
+  background-color: #ffffff; /* Fond blanc */
+  color: #000000; /* Texte noir */
+  font-family: "Montserrat-Medium", Helvetica;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.desktop .footer-form-container .form-submit-button:hover {
+  background-color: #cccccc; /* Gris clair au survol */
+}
 .desktop .div {
   position: relative;
   width: fit-content;
@@ -119,19 +186,16 @@
 .desktop .customer-quote-2 {
   display: flex;
   flex-direction: column;
+  width: 409px;
+  height: 236px;
   align-items: flex-start;
-  gap: var(--variable-collection-spacing-m);
+  gap: 88px;
   padding: var(--variable-collection-spacing-SM);
   position: relative;
-  flex: 1;
-  align-self: stretch;
-  flex-grow: 1;
   margin-top: -1.00px;
   margin-bottom: -1.00px;
-  background-color: #ffffff;
-  border-radius: 12px;
-  border: 1px solid;
-  border-color: var(--colors-border-border-default);
+  margin-left: -1.00px;
+
 }
 
 .desktop .p {
@@ -155,22 +219,18 @@
 }
 
 .desktop .customer-quote-3 {
-  margin-right: -1.00px;
-  display: flex;
+    display: flex;
   flex-direction: column;
+  width: 409px;
+  height: 236px;
   align-items: flex-start;
-  gap: var(--variable-collection-spacing-m);
+  gap: 88px;
   padding: var(--variable-collection-spacing-SM);
   position: relative;
-  flex: 1;
-  align-self: stretch;
-  flex-grow: 1;
   margin-top: -1.00px;
   margin-bottom: -1.00px;
-  background-color: #ffffff;
-  border-radius: 12px;
-  border: 1px solid;
-  border-color: var(--colors-border-border-default);
+  margin-left: -1.00px;
+
 }
 
 .desktop .navigation {
@@ -211,6 +271,32 @@
   align-items: center;
   justify-content: flex-end;
   gap: 40px;
+}
+.desktop .items a.text-wrapper-7 {
+  text-decoration: none; 
+  transition: opacity 0.2s ease-in-out; 
+}
+
+
+.desktop .items a.text-wrapper-7:hover {
+  opacity: 0.6; 
+}
+
+
+.desktop .items a.button {
+  text-decoration: none; 
+  display: inline-flex; 
+  align-items: center;
+  justify-content: center;
+  
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+
+.desktop .items a.button:hover {
+  background-color: #333; 
+  transform: translateY(-2px); 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Ajoute une ombre pour l'effet 3D */
 }
 
 .desktop .text-wrapper-5 {
@@ -360,6 +446,7 @@
   position: absolute;
   width: 100%;
   left: 0;
+  z-index: 10;
 }
 
 .desktop .raw-galerie-urbaine {
@@ -454,10 +541,10 @@
 
 .desktop .text-wrapper-8 {
   position: absolute;
-  top: 184px;
-  left: 1058px;
+  top: 218px;
+  left: 1025px;
   width: 80px;
-  height: 111px;
+  height: 31px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -468,12 +555,13 @@
   letter-spacing: var(--subheading-letter-spacing);
   line-height: var(--subheading-line-height);
   font-style: var(--subheading-font-style);
+  white-space: nowrap;
 }
 
 .desktop .text-wrapper-9 {
   position: absolute;
   top: 218px;
-  left: 1292px;
+ left: 1265px;
   width: 136px;
   height: 31px;
   display: flex;
@@ -491,10 +579,15 @@
 
 .desktop .si-phone {
   position: absolute;
-  top: 38px;
-  left: 610px;
+  top: 35px;
+  left: 614px;
   width: 24px;
   height: 24px;
+  z-index: 1;
+}
+
+.desktop .si-phone-2 {
+  display: none;
 }
 
 .desktop .group-wrapper {
@@ -509,14 +602,12 @@
 .desktop .group-2 {
   width: 253px;
   display: flex;
-  gap: 25px;
+  align-items: center;
+  gap: 0;
+  padding-left: 35px;
 }
 
-.desktop .si-phone-2 {
-  margin-top: 8px;
-  width: 24px;
-  height: 24px;
-}
+
 
 .desktop .text-wrapper-10 {
   display: flex;
@@ -535,10 +626,11 @@
 
 .desktop .v {
   position: absolute;
-  width: 0;
-  height: 6.06%;
-  top: 37.22%;
-  left: 42.59%;
+  width: 24px;
+  height: 24px;
+  top: 94px;
+  left: 614px;
+ display: block;
 }
 
 .desktop .group-3 {
@@ -709,27 +801,22 @@
   height: 715px;
 }
 
-.desktop .rectangle-2 {
+
+.desktop .group-5 {
   position: absolute;
   top: 610px;
   left: 859px;
   width: 499px;
   height: 119px;
-}
-
-.desktop .group-5 {
-  position: absolute;
-  top: 628px;
-  left: 907px;
-  width: 443px;
-  height: 119px;
   box-shadow: 0px 4px 3px #00000040;
+  background-color: #ffffffb8;
+  border-radius: 8px;
 }
 
 .desktop .text-wrapper-16 {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 18px;
+  left: 48px;
   width: 390px;
   font-family: "Noto Sans Javanese-Bold", Helvetica;
   font-weight: 700;
@@ -741,8 +828,8 @@
 
 .desktop .arrow-forward {
   position: absolute;
-  top: 5px;
-  left: 380px;
+  top: 23px;
+  left: 428px;
   width: 61px;
   height: 66px;
   box-shadow: inset 0px 4px 4px #00000040;
@@ -940,11 +1027,7 @@
 
 .desktop .une-soir-e-immersive {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   align-self: stretch;
-  height: 121px;
   font-family: "Montserrat-Regular", Helvetica;
   font-weight: 400;
   color: #828282;
@@ -955,11 +1038,7 @@
 
 .desktop .text-wrapper-20 {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   align-self: stretch;
-  height: 85px;
   font-family: "Montserrat-Regular", Helvetica;
   font-weight: 400;
   color: #828282;
