@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .desktop {
   background-color: #ffffff;
   width: 100%;
@@ -5,6 +9,7 @@
   min-height: 4995px;
   position: relative;
 }
+
 
 .desktop .text-wrapper {
   position: absolute;
@@ -454,9 +459,6 @@
   top: 35px;
   left: 68px;
   height: 108px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-family: "Montserrat-Regular", Helvetica;
   font-weight: 400;
   color: #ffffff;
@@ -925,6 +927,7 @@
   flex-direction: column;
 }
 
+
 .desktop .RAW-galerie-urbaine-wrapper {
   align-items: flex-start;
   justify-content: center;
@@ -1352,4 +1355,14 @@
   text-align: right;
   letter-spacing: 0;
   line-height: 36px;
+}
+
+.desktop .raw-galerie-urbaine a {
+  color: inherit; /* Garde la couleur blanche du texte */
+  text-decoration: none; /* Supprime le soulignement */
+  transition: opacity 0.2s ease-in-out;
+}
+.desktop .raw-galerie-urbaine a:hover {
+  opacity: 0.7; /* Effet au survol, comme les autres liens */
+  text-decoration: underline; /* Souligne l'adresse au survol */
 }
