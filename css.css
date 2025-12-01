@@ -1494,161 +1494,59 @@ h2.text-wrapper-17 {
   line-height: 36px;
 }
 
-/* =========================================== */
-/* === AJUSTEMENTS GÉNÉRAUX POUR MOBILE/TABLETTE (max-width: 768px) === */
-/* =========================================== */
-@media (max-width: 768px) {
+/* --- 1. NAVIGATION (MOBILE) --- */
 
-    /* --- Mise en page en colonne unique pour les sections principales --- */
-    
-    /* 1. SECTION TÉMOIGNAGES (cards) */
-    .desktop .cards {
-        /* Force les éléments enfants à s'empiler verticalement */
-        flex-direction: column !important;
-        
-        /* Assure que le conteneur prend toute la largeur et centre les éléments */
-        width: 100% !important;
-        align-items: center;
-        
-        /* Ajoute un peu de marge intérieure pour ne pas coller les bords */
-        padding: 0 20px; 
-        box-sizing: border-box;
-    }
-    
-    /* Assure que chaque carte prend toute la largeur disponible */
-    .desktop .cards > * {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-    
-    /* 2. SECTION ÉVÉNEMENTS (evenements-2) */
-    .desktop .evenements-2 {
-        flex-direction: column !important;
-        width: 100% !important;
-        align-items: center;
-        padding: 0 20px;
-        box-sizing: border-box;
-    }
-    
-    .desktop .evenements-2 > * {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-    
-    /* 3. SECTION BLOG (blog-2) */
-    .desktop .blog-2 {
-        flex-direction: column !important;
-        width: 100% !important;
-        align-items: center;
-        padding: 0 20px;
-        box-sizing: border-box;
-    }
-    
-    .desktop .blog-2 > * {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-    
-    /* 4. SECTIONS EXPOSITIONS (frame-2 et frame-3) */
-    .desktop .frame-2,
-    .desktop .frame-3 {
-        flex-direction: column !important;
-        width: 100% !important;
-        align-items: center;
-        padding: 0 20px;
-        box-sizing: border-box;
-    }
-    
-    .desktop .frame-2 > *,
-    .desktop .frame-3 > * {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
+/* ... (Styles .main-header, .logo, .hamburger, #menu-toggle inchangés) ... */
 
-    /* --- Ajustement de la section "À Propos" --- */
-    .desktop .apropos {
-        /* Passe de flex-row à flex-column */
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 20px;
-    }
-    
-    .desktop .image {
-        /* L'image prend la pleine largeur (ou presque) */
-        width: 90% !important;
-        margin-bottom: 20px;
-    }
-    
-    .desktop .text {
-        /* Le texte se centre et s'aligne en dessous */
-        width: 100% !important;
-        max-width: 600px;
-        align-items: center; /* Centre les éléments internes (titres/paragraphes) */
-    }
-    
-    /* --- Ajustements de la Navigation --- */
-    .desktop .navigation {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 20px 0;
-        height: auto;
-    }
-    .desktop .items {
-        flex-direction: column;
-        width: 100%;
-        margin: 20px 0;
-        gap: 15px;
-        align-items: center;
-    }
-    .desktop .text-wrapper-4 {
-        margin: 0 0 10px 0; /* Centre le logo */
-    }
-    .desktop .items a.button {
-        width: 80%;
-        max-width: 300px;
-    }
+/* Menu Mobile Overlay: FOND BLANC et TEXTE NOIR */
+.main-menu {
+    position: fixed;
+    top: 0;
+    right: 0; 
+    width: 80%; 
+    max-width: 400px;
+    height: 100vh;
+    background-color: var(--color-white); /* MODIFIÉ : Fond Blanc */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transform: translateX(100%); 
+    transition: transform 0.4s ease-in-out;
+    z-index: 99;
+}
+.main-menu a {
+    font-size: 20px;
+    color: var(--color-black); /* MODIFIÉ : Texte Noir */
+}
+.main-menu .primary-button {
+    background-color: var(--color-red); /* Vous pouvez changer la couleur du bouton Contact dans le menu */
+    border: 1px solid var(--color-red);
+}
+.main-menu .primary-button .button-text {
+    color: var(--color-white);
+}
 
-    /* --- Ajustements du Footer --- */
-    .desktop .navigation-footer {
-        flex-direction: column;
-        padding: 30px 20px 10px;
-    }
-    .desktop .raw-galerie-urbaine, 
-    .desktop .social-icons, 
-    .desktop .group-wrapper, 
-    .desktop .group-3, 
-    .desktop .text-wrapper-12, 
-    .desktop .footer-form-container {
-        position: relative;
-        left: 0;
-        top: 0;
-        margin-left: 0;
-        margin-right: 0;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 15px;
-    }
-    .desktop .social-icons {
-        justify-content: center;
-        margin-bottom: 20px;
-    }
-    .desktop .group-2, .desktop .group-3 {
-        justify-content: center;
-        padding-left: 0;
-    }
-    /* Les mentions légales en bas */
-    .footer-mentions {
-        display: flex;
-        justify-content: space-around;
-        width: 100%;
-    }
-    .desktop .text-wrapper-8, .desktop .text-wrapper-9 {
-        position: relative; /* Annule l'absolu du desktop */
-        left: auto;
-        top: auto;
-        margin: 0;
-    }
+/* Menu Mobile - État Ouvert */
+#menu-toggle:checked ~ .main-menu {
+    transform: translateX(0);
+}
+
+/* MODIFICATION CLÉ : Styles de la croix du hamburger pour être visible */
+
+/* Animation du hamburger en croix (La croix doit être NOIRE sur le fond blanc du menu) */
+#menu-toggle:checked + .hamburger span {
+    background: var(--color-black); /* MODIFIÉ : Assure que la croix est noire */
+}
+#menu-toggle:checked + .hamburger span:nth-child(1) { 
+    transform: translateY(11px) rotate(45deg); 
+}
+#menu-toggle:checked + .hamburger span:nth-child(2) { 
+    opacity: 0; 
+}
+#menu-toggle:checked + .hamburger span:nth-child(3) { 
+    transform: translateY(-11px) rotate(-45deg); 
 }
 
 
