@@ -1493,27 +1493,193 @@ h2.text-wrapper-17 {
   letter-spacing: 0;
   line-height: 36px;
 }
-/* MODE RESPONSIVE : UNE SEULE COLONNE */
+
+/* =========================================== */
+/* === AJUSTEMENTS GÉNÉRAUX POUR MOBILE/TABLETTE (max-width: 768px) === */
+/* =========================================== */
 @media (max-width: 768px) {
 
-  .frame-2,
-  .frame-3,
-  .evenements-2,
-  .blog-2,
-  .cards {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 20px !important;
-    width: 100% !important;
-  }
+    /* --- Mise en page en colonne unique pour les sections principales --- */
+    
+    /* 1. SECTION TÉMOIGNAGES (cards) */
+    .desktop .cards {
+        /* Force les éléments enfants à s'empiler verticalement */
+        flex-direction: column !important;
+        
+        /* Assure que le conteneur prend toute la largeur et centre les éléments */
+        width: 100% !important;
+        align-items: center;
+        
+        /* Ajoute un peu de marge intérieure pour ne pas coller les bords */
+        padding: 0 20px; 
+        box-sizing: border-box;
+    }
+    
+    /* Assure que chaque carte prend toute la largeur disponible */
+    .desktop .cards > * {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* 2. SECTION ÉVÉNEMENTS (evenements-2) */
+    .desktop .evenements-2 {
+        flex-direction: column !important;
+        width: 100% !important;
+        align-items: center;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    
+    .desktop .evenements-2 > * {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* 3. SECTION BLOG (blog-2) */
+    .desktop .blog-2 {
+        flex-direction: column !important;
+        width: 100% !important;
+        align-items: center;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    
+    .desktop .blog-2 > * {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* 4. SECTIONS EXPOSITIONS (frame-2 et frame-3) */
+    .desktop .frame-2,
+    .desktop .frame-3 {
+        flex-direction: column !important;
+        width: 100% !important;
+        align-items: center;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    
+    .desktop .frame-2 > *,
+    .desktop .frame-3 > * {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
 
-  .frame-2 > *,
-  .frame-3 > *,
-  .evenements-2 > *,
-  .blog-2 > *,
-  .cards > * {
-    width: 100% !important;
-  }
+    /* --- Ajustement de la section "À Propos" --- */
+    .desktop .apropos {
+        /* Passe de flex-row à flex-column */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .desktop .image {
+        /* L'image prend la pleine largeur (ou presque) */
+        width: 90% !important;
+        margin-bottom: 20px;
+    }
+    
+    .desktop .text {
+        /* Le texte se centre et s'aligne en dessous */
+        width: 100% !important;
+        max-width: 600px;
+        align-items: center; /* Centre les éléments internes (titres/paragraphes) */
+    }
+    
+    /* --- Ajustements de la Navigation --- */
+    .desktop .navigation {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 20px 0;
+        height: auto;
+    }
+    .desktop .items {
+        flex-direction: column;
+        width: 100%;
+        margin: 20px 0;
+        gap: 15px;
+        align-items: center;
+    }
+    .desktop .text-wrapper-4 {
+        margin: 0 0 10px 0; /* Centre le logo */
+    }
+    .desktop .items a.button {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    /* --- Ajustements du Footer --- */
+    .desktop .navigation-footer {
+        flex-direction: column;
+        padding: 30px 20px 10px;
+    }
+    .desktop .raw-galerie-urbaine, 
+    .desktop .social-icons, 
+    .desktop .group-wrapper, 
+    .desktop .group-3, 
+    .desktop .text-wrapper-12, 
+    .desktop .footer-form-container {
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .desktop .social-icons {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .desktop .group-2, .desktop .group-3 {
+        justify-content: center;
+        padding-left: 0;
+    }
+    /* Les mentions légales en bas */
+    .footer-mentions {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .desktop .text-wrapper-8, .desktop .text-wrapper-9 {
+        position: relative; /* Annule l'absolu du desktop */
+        left: auto;
+        top: auto;
+        margin: 0;
+    }
 }
 
+
+/* =========================================== */
+/* === RÈGLES DE RESTAURATION POUR LE DESKTOP (pour éviter les conflits) === */
+/* =========================================== */
+@media (min-width: 769px) {
+    /* Rétablit les affichages en ligne pour les sections en colonnes multiples */
+    .desktop .evenements-2,
+    .desktop .blog-2 {
+        flex-direction: row !important;
+        justify-content: center;
+    }
+    .desktop .frame-2,
+    .desktop .frame-3,
+    .desktop .cards {
+        flex-direction: row !important;
+        justify-content: center;
+    }
+    
+    /* Rétablit la mise en page 'À propos' en deux colonnes */
+    .desktop .apropos {
+        flex-direction: row;
+    }
+    
+    /* Rétablit le layout du header/footer en ligne/absolu si nécessaire */
+    .desktop .navigation {
+        flex-direction: row;
+        /* ... (Autres styles desktop pour la navigation) ... */
+    }
+    
+    /* ... (Vous pouvez ajouter d'autres restaurations spécifiques si les styles desktop sont cassés) ... */
+}
 
