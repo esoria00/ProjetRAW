@@ -459,7 +459,8 @@ h2.text-wrapper {
   margin-bottom: 5px;
   font-weight: 400;
   font-size: 14px;
-  color: #c0c0c0; 
+  /* CORRECTION 16 : Contraste de couleur pour l'accessibilité (Label Newsletter) */
+  color: #a0a0a0; 
 }
 
 .desktop .footer-form-container input[type="text"],
@@ -1331,7 +1332,9 @@ h2.text-wrapper-17 {
   height: 406px;
   border-radius: 8px;
   background-image: url(images/shibuya.jpg);
-  background-size: 100% 100%;
+  /* CORRECTION 17 : background-size à 'cover' pour conserver le ratio d'aspect */
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 .desktop .textsq {
@@ -1395,7 +1398,9 @@ h2.text-wrapper-17 {
   height: 409px;
   border-radius: 8px;
   background-image: url(images/lights.jpg);
-  background-size: 100% 100%;
+  /* CORRECTION 18 : background-size à 'cover' pour conserver le ratio d'aspect */
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 .desktop .textsq-2 {
@@ -1424,7 +1429,9 @@ h2.text-wrapper-17 {
   height: 435px;
   border-radius: 8px;
   background-image: url(images/chess.jpg);
-  background-size: 100% 100%;
+  /* CORRECTION 19 : background-size à 'cover' pour conserver le ratio d'aspect */
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 .desktop .textsq-3 {
@@ -1457,7 +1464,9 @@ h2.text-wrapper-17 {
   height: 409px;
   border-radius: 8px;
   background-image: url(images/railway.jpg);
-  background-size: 100% 100%;
+  /* CORRECTION 20 : background-size à 'cover' pour conserver le ratio d'aspect */
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 .desktop .textsq-4 {
