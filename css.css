@@ -1652,34 +1652,3 @@ h2.text-wrapper-17 {
 }
 
 
-/* =========================================== */
-/* === RÈGLES DE RESTAURATION POUR LE DESKTOP (pour éviter les conflits) === */
-/* =========================================== */
-@media (min-width: 769px) {
-    /* Rétablit les affichages en ligne pour les sections en colonnes multiples */
-    .desktop .evenements-2,
-    .desktop .blog-2 {
-        flex-direction: row !important;
-        justify-content: center;
-    }
-    .desktop .frame-2,
-    .desktop .frame-3,
-    .desktop .cards {
-        flex-direction: row !important;
-        justify-content: center;
-    }
-    
-    /* Rétablit la mise en page 'À propos' en deux colonnes */
-    .desktop .apropos {
-        flex-direction: row;
-    }
-    
-    /* Rétablit le layout du header/footer en ligne/absolu si nécessaire */
-    .desktop .navigation {
-        flex-direction: row;
-        /* ... (Autres styles desktop pour la navigation) ... */
-    }
-    
-    /* ... (Vous pouvez ajouter d'autres restaurations spécifiques si les styles desktop sont cassés) ... */
-}
-
