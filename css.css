@@ -1493,3 +1493,14 @@ h2.text-wrapper-17 {
   letter-spacing: 0;
   line-height: 36px;
 }
+.container {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  gap: 20px;
+}
+
+.container > * {
+  width: 100% !important;
+}
+
