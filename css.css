@@ -1504,3 +1504,15 @@ h2.text-wrapper-17 {
   width: 100% !important;
 }
 
+.desktop {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+}
+
+.desktop > * {
+  width: 100% !important;
+  display: block !important;
+}
+
+
