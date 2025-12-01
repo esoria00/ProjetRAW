@@ -18,7 +18,10 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Javanese:wght@400;700&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="images/banner.jpg">
-  <link href="css.css" rel="stylesheet">
+  
+  <link rel="preload" href="css.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css.css"></noscript>
+  
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -105,10 +108,10 @@
       <div class="apropos" id="apropos">
         <div class="image">
           <div class="media-content">
-            <img class="crossline" src="images/crossline-2.svg" alt="" />
-            <img class="crossline" src="images/crossline.svg" alt="" />
+            <img class="crossline" src="images/crossline-2.svg" alt="" loading="lazy" />
+            <img class="crossline" src="images/crossline.svg" alt="" loading="lazy" />
           </div>
-          <img class="owner" src="images/owner.jpg" alt="M. Dechewski, fondateur et curateur de la galerie RAW" />
+          <img class="owner" src="images/owner.jpg" alt="M. Dechewski, fondateur et curateur de la galerie RAW" loading="lazy" />
         </div>
         <h2 class="text-wrapper-17">À propos de nous</h2>
         <div class="text">
@@ -126,14 +129,14 @@
         <h2 class="text-wrapper-18">Nos événements</h2>
         <div class="evenements-2">
           <div class="sq">
-            <img class="img-2" src="images/expo.jpg" alt="Photographie de Nuit RAW" />
+            <img class="img-2" src="images/expo.jpg" alt="Photographie de Nuit RAW" loading="lazy" />
             <div class="copy">
               <h3 class="text-wrapper-19">Nuit RAW</h3>
               <p class="une-soir-e-immersive">Une soirée immersive entre projections, sons et échanges libres.</p>
             </div>
           </div>
           <div class="sq">
-            <img class="img-2" src="images/artiste.jpg" alt="Un photographe parle à son public" />
+            <img class="img-2" src="images/artiste.jpg" alt="Un photographe parle à son public" loading="lazy" />
             <div class="copy">
               <h3 class="text-wrapper-19">The story behind the pictures</h3>
               <p class="text-wrapper-20">Les photographes partagent leurs visions de la ville</p>
@@ -145,7 +148,7 @@
           <h2 class="text-wrapper-21">Notre blog</h2>
         <div class="blog-2">
           <div class="sq">
-            <img class="pexels-tommyclopez" src="images/podcast.jpg" alt="Microphone de podcast RAW VIBES" />
+            <img class="pexels-tommyclopez" src="images/podcast.jpg" alt="Microphone de podcast RAW VIBES" loading="lazy" />
             <div class="copy-2">
               <h3 class="text-wrapper-19">RAW VIBES - Ton podcast artistique</h3>
               <p class="chaque-pisode-te">
@@ -154,7 +157,7 @@
             </div>
           </div>
           <div class="sq">
-            <img class="pexels" src="images/photo.jpg" alt="Jeune photographe dans la rue" />
+            <img class="pexels" src="images/photo.jpg" alt="Jeune photographe dans la rue" loading="lazy" />
             <div class="copy">
               <h3 class="text-wrapper-19">New hands</h3>
               <p class="zoom-sur-la-nouvelle">
@@ -166,7 +169,7 @@
       </div>
       
       <div class="banred">
-        <img class="fond-rouge" src="images/barre.jpg" alt="Fond décoratif rouge" />
+        <img class="fond-rouge" src="images/barre.jpg" alt="Fond décoratif rouge" loading="lazy" />
         <div class="text-wrapper-13">RAW Inside</div>
         <div class="buttons">
           <a href="#contact" class="div-wrapper">
@@ -183,7 +186,7 @@
         <div class="customer-quote">
           <p class="div">« Une claque visuelle. »</p>
           <div class="avatar">
-            <img class="img" src="images/Avatar.png" alt="Portrait de Karim D." />
+            <img class="img" src="images/Avatar.png" alt="Portrait de Karim D." loading="lazy" />
             <div class="frame">
               <div class="text-wrapper-2">Karim D.</div>
               <div class="text-wrapper-3">Visiteur régulier</div>
@@ -193,7 +196,7 @@
         <div class="customer-quote-2">
           <p class="p">« Un lieu vivant, pas un musée. »</p>
           <div class="avatar-2">
-            <img class="img" src="images/Avatar (1).png" alt="Portrait de Lea M." />
+            <img class="img" src="images/Avatar (1).png" alt="Portrait de Lea M." loading="lazy" />
             <div class="frame">
               <div class="text-wrapper-2">Lea M.</div>
               <div class="text-wrapper-3">Étudiante en arts visuels</div>
@@ -203,7 +206,7 @@
         <div class="customer-quote-3">
           <p class="p">« RAW, c’est la ville qui parle. »</p>
           <div class="avatar-2">
-            <img class="img" src="images/Avatar (2).png" alt="Portrait de Zoé T."/>
+            <img class="img" src="images/Avatar (2).png" alt="Portrait de Zoé T." loading="lazy" />
             <div class="frame">
               <div class="text-wrapper-2">Zoé T.</div>
               <div class="text-wrapper-3">Photographe amateur</div>
@@ -243,23 +246,23 @@
           </a>
 
         </div>
-        <img class="divider" src="images/image.svg" alt="" />
-        <img class="divider-2" src="images/divider.svg" alt="" />
+        <img class="divider" src="images/image.svg" alt="" loading="lazy" />
+        <img class="divider-2" src="images/divider.svg" alt="" loading="lazy" />
         <div class="text-wrapper-8">CGU</div>
         <div class="text-wrapper-9">Legal</div>
-        <img class="si-phone" src="images/telephone.png" alt="icône de téléphone" />
+        <img class="si-phone" src="images/telephone.png" alt="icône de téléphone" loading="lazy" />
         <div class="group-wrapper">
           <div class="group-2">
-            <img class="si-phone-2" src="images/si-phone.svg" alt="" />
+            <img class="si-phone-2" src="images/si-phone.svg" alt="" loading="lazy" />
             <p class="text-wrapper-10">04 01 02 03 04</p>
           </div>
         </div>
-        <img class="v" src="images/mail.png" alt="icône de mail"/>
+        <img class="v" src="images/mail.png" alt="icône de mail" loading="lazy" />
         <div class="group-3">
           <div class="text-wrapper-11">raw@raw.com</div>
-          <a href="mailto:raw@raw.com" target="_blank" rel="noopener noreferrer"><img class="v-2" src="images/v.svg" alt="" /></a>
+          <a href="mailto:raw@raw.com" target="_blank" rel="noopener noreferrer"><img class="v-2" src="images/v.svg" alt="" loading="lazy" /></a>
           </div>
-        <img class="text-on-a-path" src="images/text-on-a-path.svg" alt="" />
+        <img class="text-on-a-path" src="images/text-on-a-path.svg" alt="" loading="lazy" />
         <p class="text-wrapper-12">Ouvert de mercredi à dimanche de 10 à 17 heures</p>
         
         <div class="footer-form-container" id="contact">
