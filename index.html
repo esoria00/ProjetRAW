@@ -46,7 +46,7 @@
 <body>
     
     <header class="mobile-header">
-      <input type="checkbox" id="menu-toggle" class="visually-hidden">
+      <input type="checkbox" id="menu-toggle" class="visually-hidden" aria-hidden="true" tabindex="-1">
       <img class="group" src="images/Raw.png" width="120" height="40" alt="Logo RAW Galerie Urbaine" />
       <label for="menu-toggle" class="hamburger" aria-label="Ouvrir le menu de navigation">
         <span aria-hidden="true"></span>
@@ -96,7 +96,7 @@
       <h2 class="text-wrapper-23">Découvrez nos expositions</h2>
       
       <div class="expo" id="expo">
-          <input type="checkbox" id="frame-toggle" class="visually-hidden">
+          <input type="checkbox" id="frame-toggle" class="visually-hidden" aria-hidden="true" tabindex="-1">
 
          <div class="frame-2">
             <div class="square snap-item">
@@ -120,10 +120,10 @@
           </div>
 
           <div class="nav-control-wrapper">
-              <label for="frame-toggle" class="nav-arrow left-arrow" aria-label="Afficher les expositions précédentes" role="button">
+              <label for="frame-toggle" class="nav-arrow left-arrow" aria-label="Afficher les expositions précédentes" role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' '){ document.getElementById('frame-toggle').click(); }">
                   <img src="images/left.png" width="24" height="24" alt="" aria-hidden="true" />
               </label>
-              <label for="frame-toggle" class="nav-arrow right-arrow" aria-label="Afficher les expositions suivantes" role="button">
+              <label for="frame-toggle" class="nav-arrow right-arrow" aria-label="Afficher les expositions suivantes" role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' '){ document.getElementById('frame-toggle').click(); }">
                   <img src="images/right.png" width="24" height="24" alt="" aria-hidden="true" />
               </label>
           </div>
