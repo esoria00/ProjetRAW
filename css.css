@@ -28,6 +28,12 @@ body{
   -moz-osx-font-smoothing:grayscale;
 }
 
+/* OPTIMISATION: Gestion globale des images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Accessible helper */
 .visually-hidden{
   position:absolute!important;
@@ -118,7 +124,6 @@ body{
 /* ========== NAVIGATION DESKTOP (hidden on mobile) ========== */
 .navigation{
   display:none; 
-  /* Le reste du style est géré dans la Media Query Desktop */
 }
 
 .items{ display:flex; gap:32px; align-items:center; }
@@ -139,6 +144,8 @@ body{
   height:100%;
   object-fit:cover;
   display:block;
+  /* OPTIMISATION: couleur de fond pendant chargement */
+  background-color: #e0e0e0;
 }
 
 .group-5{
