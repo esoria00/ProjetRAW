@@ -17,6 +17,8 @@
   <meta name="twitter:title" content="RAW Galerie Urbaine" />
   <meta name="twitter:description" content="Expositions et événements de photographie urbaine à Paris." />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Javanese:wght@400;700&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="css.css">
@@ -45,7 +47,7 @@
     
     <header class="mobile-header">
       <input type="checkbox" id="menu-toggle" class="visually-hidden">
-      <img class="group" src="images/Raw.png" alt="Logo RAW Galerie Urbaine" />
+      <img class="group" src="images/Raw.png" width="120" height="40" alt="Logo RAW Galerie Urbaine" />
       <label for="menu-toggle" class="hamburger" aria-label="Menu de navigation">
         <span></span>
         <span></span>
@@ -61,7 +63,7 @@
 
     <div class="navigation">
       <div class="navigation-content">
-          <img class="group" src="images/Raw.png" alt="Logo RAW Galerie Urbaine" />
+          <img class="group" src="images/Raw.png" width="90" height="30" alt="Logo RAW Galerie Urbaine" />
           
           <nav class="items" aria-label="Menu principal">
             <a href="#apropos" class="text-wrapper-7">À propos</a>
@@ -77,11 +79,18 @@
     <main class="desktop responsive-wrapper"> 
 
       <div class="banner">
-        <img class="rectangle" src="images/banner.webp" width="1920" height="480" fetchpriority="high" alt="Photographie urbaine" />
+        <img class="rectangle" 
+             src="images/banner.webp" 
+             srcset="images/banner-mobile.webp 600w, images/banner.webp 1920w"
+             sizes="(max-width: 768px) 100vw, 1920px"
+             width="1920" height="480" 
+             fetchpriority="high" 
+             alt="Photographie urbaine" />
+             
         <h1 class="visually-hidden">RAW Galerie Urbaine - Photographie urbaine & expositions à Paris</h1>
         <a href="#" class="group-5 visit-button">
           <div class="text-wrapper-16">Prepare ta visite</div>
-          <div class="arrow-forward"><img class="icon-6" src="images/fleche.png" alt="" /></div>
+          <div class="arrow-forward"><img class="icon-6" src="images/fleche.png" width="20" height="20" alt="" /></div>
         </a>
       </div>
       
@@ -91,32 +100,32 @@
           <input type="checkbox" id="frame-toggle" class="visually-hidden">
 
          <div class="frame-2">
-    <div class="square snap-item">
-        <img class="expo-img" src="images/shibuya.webp" width="600" height="600" loading="lazy" alt="Quartier de Shinjuku" />
-        <div class="textsq"><h3 class="text-wrapper-22">SHINJUKU x Ryoji Iwata</h3></div>
-    </div>
-    <div class="square-2 snap-item">
-        <img class="expo-img" src="images/look.webp" width="600" height="600" loading="lazy" alt="Sous-terrain" />
-        <div class="textsq-2"><h3 class="text-wrapper-22">Underground x Enzo Rossi</h3></div>
-    </div>
-    <div class="square-3 snap-item">
-        <img class="expo-img" src="images/lights.webp" width="600" height="600" loading="lazy" alt="Photographie argentique." />
-        <div class="textsq-3"><h3 class="text-wrapper-22">Argentique x KAP</h3></div>
-    </div>
-</div>
+            <div class="square snap-item">
+                <img class="expo-img" src="images/shibuya.webp" width="600" height="600" loading="lazy" decoding="async" alt="Quartier de Shinjuku" />
+                <div class="textsq"><h3 class="text-wrapper-22">SHINJUKU x Ryoji Iwata</h3></div>
+            </div>
+            <div class="square-2 snap-item">
+                <img class="expo-img" src="images/look.webp" width="600" height="600" loading="lazy" decoding="async" alt="Sous-terrain" />
+                <div class="textsq-2"><h3 class="text-wrapper-22">Underground x Enzo Rossi</h3></div>
+            </div>
+            <div class="square-3 snap-item">
+                <img class="expo-img" src="images/lights.webp" width="600" height="600" loading="lazy" decoding="async" alt="Photographie argentique." />
+                <div class="textsq-3"><h3 class="text-wrapper-22">Argentique x KAP</h3></div>
+            </div>
+        </div>
           
           <div class="frame-3">
-              <div class="square-4 snap-item"><img class="expo-img" src="images/chess.webp" width="600" height="600" loading="lazy" alt="Photographie de un jeu d'échecs" loading="lazy" /> <div class="textsq-3"><h3 class="text-wrapper-22">games x Ryoji Iwata</h3></div></div>
-              <div class="square-2 snap-item"><img class="expo-img" src="images/clothes.webp" width="600" height="600" loading="lazy" alt="Photographie de de vêtements" loading="lazy" /> <div class="textsq-2"><h3 class="text-wrapper-22">Abbigliamento x Enzo Rossi</h3></div></div>
-              <div class="square-3 snap-item"><img class="expo-img" src="images/railway.webp" width="600" height="600" loading="lazy" alt="Photographie de voies ferrées en ville" loading="lazy" /> <div class="textsq-4"><h3 class="text-wrapper-24">railways x KAP</h3></div></div>
+              <div class="square-4 snap-item"><img class="expo-img" src="images/chess.webp" width="600" height="600" loading="lazy" decoding="async" alt="Photographie de un jeu d'échecs" /> <div class="textsq-3"><h3 class="text-wrapper-22">games x Ryoji Iwata</h3></div></div>
+              <div class="square-2 snap-item"><img class="expo-img" src="images/clothes.webp" width="600" height="600" loading="lazy" decoding="async" alt="Photographie de de vêtements" /> <div class="textsq-2"><h3 class="text-wrapper-22">Abbigliamento x Enzo Rossi</h3></div></div>
+              <div class="square-3 snap-item"><img class="expo-img" src="images/railway.webp" width="600" height="600" loading="lazy" decoding="async" alt="Photographie de voies ferrées en ville" /> <div class="textsq-4"><h3 class="text-wrapper-24">railways x KAP</h3></div></div>
           </div>
 
           <div class="nav-control-wrapper">
               <label for="frame-toggle" class="nav-arrow left-arrow" aria-label="Afficher les expositions précédentes">
-                  <img src="images/left.png" alt="Flèche gauche" />
+                  <img src="images/left.png" width="24" height="24" alt="Flèche gauche" />
               </label>
               <label for="frame-toggle" class="nav-arrow right-arrow" aria-label="Afficher les expositions suivantes">
-                  <img src="images/right.png" alt="Flèche droite" />
+                  <img src="images/right.png" width="24" height="24" alt="Flèche droite" />
               </label>
           </div>
       </div>
@@ -139,10 +148,10 @@
         
         <div class="image">
             <div class="media-content">
-                <img class="crossline" src="images/crossline-2.svg" alt="" loading="lazy" />
-                <img class="crossline" src="images/crossline.svg" alt="" loading="lazy" />
+                <img class="crossline" src="images/crossline-2.svg" width="50" height="50" alt="" loading="lazy" />
+                <img class="crossline" src="images/crossline.svg" width="50" height="50" alt="" loading="lazy" />
             </div>
-            <img class="owner" src="images/owner.jpg" alt="M. Dechewski, fondateur et curateur de la galerie RAW" loading="lazy" />
+            <img class="owner" src="images/owner.jpg" width="400" height="600" alt="M. Dechewski, fondateur et curateur de la galerie RAW" loading="lazy" decoding="async" />
         </div>
     </div>
 
@@ -150,14 +159,14 @@
           <h2 class="text-wrapper-18">Nos événements</h2>
           <div class="evenements-2">
             <div class="sq">
-              <img class="img-2" src="images/expo.webp" width="600" height="600" loading="lazy" alt="Photographie de Nuit RAW" loading="lazy" />
+              <img class="img-2" src="images/expo.webp" width="600" height="600" loading="lazy" decoding="async" alt="Photographie de Nuit RAW" />
               <div class="copy">
                 <h3 class="text-wrapper-19">Nuit RAW</h3>
                 <p class="une-soir-e-immersive">Une soirée immersive entre projections, sons et échanges libres.</p>
               </div>
             </div>
             <div class="sq">
-              <img class="img-2" src="images/artiste.webp" width="600" height="600" loading="lazy" alt="Un photographe parle à son public" loading="lazy" />
+              <img class="img-2" src="images/artiste.webp" width="600" height="600" loading="lazy" decoding="async" alt="Un photographe parle à son public" />
               <div class="copy">
                 <h3 class="text-wrapper-19">The story behind the pictures</h3>
                 <p class="text-wrapper-20">Les photographes partagent leurs visions de la ville</p>
@@ -170,7 +179,7 @@
         <h2 class="text-wrapper-21">Notre blog</h2>
         <div class="blog-2">
             <div class="sq">
-              <img class="pexels-tommyclopez" src="images/podcast.webp" width="600" height="600" alt="Microphone de podcast RAW VIBES" loading="lazy" />
+              <img class="pexels-tommyclopez" src="images/podcast.webp" width="600" height="600" alt="Microphone de podcast RAW VIBES" loading="lazy" decoding="async" />
               <div class="copy-2">
                 <h3 class="text-wrapper-19">RAW VIBES - Ton podcast artistique</h3>
                 <p class="chaque-pisode-te">
@@ -179,7 +188,7 @@
               </div>
             </div>
             <div class="sq">
-              <img class="pexels" src="images/photo.webp" width="600" height="600" alt="Jeune photographe dans la rue" loading="lazy" />
+              <img class="pexels" src="images/photo.webp" width="600" height="600" alt="Jeune photographe dans la rue" loading="lazy" decoding="async" />
               <div class="copy">
                 <h3 class="text-wrapper-19">New hands</h3>
                 <p class="zoom-sur-la-nouvelle">
@@ -207,7 +216,7 @@
           <div class="customer-quote">
             <p class="div">« Une claque visuelle. »</p>
             <div class="avatar">
-              <img class="img" src="images/Avatar.png" alt="Portrait de Karim D." loading="lazy" />
+              <img class="img" src="images/Avatar.png" width="48" height="48" alt="Portrait de Karim D." loading="lazy" />
               <div class="frame">
                 <div class="text-wrapper-2">Karim D.</div>
                 <div class="text-wrapper-3">Visiteur régulier</div>
@@ -217,7 +226,7 @@
           <div class="customer-quote-2">
             <p class="p">« Un lieu vivant, pas un musée. »</p>
             <div class="avatar-2">
-              <img class="img" src="images/Avatar (1).png" alt="Portrait de Lea M." loading="lazy" />
+              <img class="img" src="images/Avatar (1).png" width="48" height="48" alt="Portrait de Lea M." loading="lazy" />
               <div class="frame">
                 <div class="text-wrapper-2">Lea M.</div>
                 <div class="text-wrapper-3">Étudiante en arts visuels</div>
@@ -227,7 +236,7 @@
           <div class="customer-quote-3">
             <p class="p">« RAW, c’est la ville qui parle. »</p>
             <div class="avatar-2">
-              <img class="img" src="images/Avatar (2).png" alt="Portrait de Zoé T." loading="lazy" />
+              <img class="img" src="images/Avatar (2).png" width="48" height="48" alt="Portrait de Zoé T." loading="lazy" />
               <div class="frame">
                 <div class="text-wrapper-2">Zoé T.</div>
                 <div class="text-wrapper-3">Photographe amateur</div>
@@ -244,21 +253,21 @@
           </a>
         </p>
         
-        <img class="divider" src="images/image.svg" alt="" loading="lazy" />
+        <img class="divider" src="images/image.svg" width="300" height="2" alt="" loading="lazy" />
 
         <div class="contact-item tel-row"> 
-          <img src="images/telephone.png" alt="icône de téléphone" loading="lazy" />
+          <img src="images/telephone.png" width="20" height="20" alt="icône de téléphone" loading="lazy" />
           <p class="text-wrapper-10">04 01 02 03 04</p>
         </div>
         
         <div class="contact-item mail-row">
-          <img src="images/mail.png" alt="icône de mail" loading="lazy" />
+          <img src="images/mail.png" width="20" height="20" alt="icône de mail" loading="lazy" />
           <a href="mailto:raw@raw.com" class="text-wrapper-11">raw@raw.com</a>
         </div>
         
         <p class="text-wrapper-12">Ouvert de mercredi à dimanche de 10 à 17 heures</p>
 
-        <img class="divider-2" src="images/divider.svg" alt="" loading="lazy" />
+        <img class="divider-2" src="images/divider.svg" width="300" height="2" alt="" loading="lazy" />
 
         <div class="footer-form-container" id="contact">
           <form action="#" method="POST" aria-label="Formulaire d'inscription à la newsletter">
@@ -277,16 +286,16 @@
         
         <div class="social-icons">
           <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Lien vers notre page Facebook">
-            <div class="buttons-icon"><img class="icon-2" src="images/facebook.png" alt="" /></div>
+            <div class="buttons-icon"><img class="icon-2" src="images/facebook.png" width="22" height="22" alt="" /></div>
           </a>
           <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="Lien vers notre page LinkedIn">
-            <div class="buttons-icon"><img class="icon-3" src="images/linkedin.png" alt="" /></div>
+            <div class="buttons-icon"><img class="icon-3" src="images/linkedin.png" width="22" height="22" alt="" /></div>
           </a>
           <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="Lien vers notre chaîne YouTube">
-            <div class="buttons-icon"><img class="icon-4" src="images/youtube.png" alt="" /></div>
+            <div class="buttons-icon"><img class="icon-4" src="images/youtube.png" width="22" height="22" alt="" /></div>
           </a>
           <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Lien vers notre page Instagram">
-            <div class="buttons-icon"><img class="icon-5" src="images/instagram.png" alt="" /></div>
+            <div class="buttons-icon"><img class="icon-5" src="images/instagram.png" width="22" height="22" alt="" /></div>
           </a>
         </div>
         
