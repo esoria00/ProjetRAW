@@ -8,7 +8,7 @@
   --black: #000;
   --white: #fff;
   --red: #c92a2a;
-  --grey: #706e6e;
+  --grey: #595757;
   --bg: #f8f8f8;
   --max-content-width: 1348px;
   --gap: 24px;
@@ -402,7 +402,10 @@ h2[class^="text-wrapper"], h2.text-wrapper-23, h2.text-wrapper-17, h2.text-wrapp
 }
 .form-submit-button{ display:inline-block; width:100%; text-align:center; padding:10px;border-radius:8px; background:var(--white); color:var(--black); cursor:pointer }
 
-a:focus, button:focus, input:focus{ outline: 3px solid rgba(0,123,255,.15); outline-offset:2px; }
+a:focus, button:focus, input:focus, label:focus { 
+    outline: 3px solid #0056b3; 
+    outline-offset: 2px; 
+}
 
 /* ==========================================================
    MEDIA QUERY MOBILE (max-width: 1023px)
