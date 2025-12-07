@@ -775,6 +775,15 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(0,123,255,.15); outl
       padding-top: 20px;
       border-top: 1px solid rgba(255,255,255,0.2);
   }
+a:focus, button:focus, input:focus, label:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
 
+
+.footer-form-container label {
+    color: #ffffff; /* Contraste maximal */
+    font-weight: 500;
+}
   .navigation-footer .divider, .navigation-footer .divider-2, .footer-bottom-line { display: none; }
 }
